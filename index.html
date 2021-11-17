@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Wavey Wave</title>
+		<link type="text/css" rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<canvas></canvas>
+        <div id="controls">
+        <label>Draw Lines
+            <input type="checkbox" onclick="shouldDrawLines = !shouldDrawLines"></input>
+        </label>
+        <br/>
+        <label>Dot Radius
+            <input type="range" min="2" max="100" value="10" onchange="dotRadius = parseInt(this.value); init()">
+        </label>
+        <br/>
+        <label>Speed
+            <input type="range" min="1" max="10" value="1" onchange="speedMult = parseInt(this.value)">
+        </label>
+        <br/>
+        <label>Amplitude
+            <input type="range" min="10" max="1000" value="200" onchange="setAmp(parseInt(this.value))">
+        </label>
+        <br>
+        <button onclick="init()">Restart</button>
+        </div>
+		<script src="script.js"></script>
+	</body>
+</html>
